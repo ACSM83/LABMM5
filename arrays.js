@@ -5,7 +5,7 @@ const ponto1 = (value, nRep) => {
         arr.push(value);
     }
     return arr;
-}
+};
 console.log(ponto1(2, 2));
 
 //2. Escreva uma função que recebe um array e um valor como parâmetros e devolve o número de vezes que o valor se repete no array.
@@ -44,7 +44,7 @@ console.log(ponto3(10, -10));
 const ponto4 = (arr) => {
     let invertido = "";
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] == arr.toUpperCase()){
+        if(arr[i] == arr[i].toUpperCase()){
             invertido += arr[i].toLowerCase();
         } else {
             invertido += arr[i].toUpperCase();
@@ -56,5 +56,14 @@ let wordSplit = (s) => s.split('');
 console.log(ponto4(wordSplit("Ana Marques")));
 
 //5. Altere os elementos ímpares do array seguinte para que contenham o dobro do valor inicial:
-//var numeros = [4, 9, 7, 2, 1, 8];
+var numeros = [4, 9, 7, 2, 1, 8];
 //Utilize o conceito de Arrow Functions.
+const imparDobro = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 == 1){
+            arr[i] *= 2;
+        }
+    }
+    return arr;
+};
+console.log(imparDobro(numeros));
